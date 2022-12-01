@@ -11,13 +11,18 @@ A template for completing Advent Of Code in a quick and neatly fashion.
 
 ### For day in current yeer
 `$ python aoc.py {day}`
+
 Example `$ python aoc.py 5`
 
 ### For any advent of code problem
 `$ python aoc.py {day} {year}`
+
 Example `$ python aoc.py 5 2015`
 
 # Dependencies
 `$ pip install bs4`
+
 `$ pip install requests`
+
 `$ pip install python-dotenv`
+
