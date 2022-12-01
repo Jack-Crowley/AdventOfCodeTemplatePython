@@ -17,5 +17,6 @@ class File():
         if not os.path.exists(self.path):
             os.makedirs(self.path)
         else:
-            if (input("This file already exists, would you like to overwrite it (y/n)").upper()=="N"):
+            if (input("This file already exists, would you like to overwrite it (y/n)").upper()!="Y"):
+                print("Creation Canceled")
                 quit()

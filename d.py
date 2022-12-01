@@ -4,9 +4,10 @@ from FileMaker import File
 import os
 from dotenv import load_dotenv
 import sys
+import datetime
 
 class getData():
-    def __init__(self, day, year=2021):
+    def __init__(self, day, year=2022 ):
         #Change Session ID
         load_dotenv()
         sessionID = os.getenv("session")
@@ -29,14 +30,17 @@ class getData():
     def createCodeFile(self):    
         self.codeFile = open(self.files.path+"code.py", "w")
         self.codeFile.write("import itertools\nimport collections\nimport heapq\n\n")
-        self.codeFile.write(f'with open("./{self.year}/day+{self.day}/input.txt") as data: data = [i.strip() for i in data.readlines()]\n')
+        self.codeFile.write(f'with open("./{self.year}/day{self.day}/input.txt") as data: data = [i.strip() for i in data.readlines()]\n')
         self.codeFile.write("\ndef part1():\n\tpass")
-        self.codeFile.write("\ndef part2():\n\tpass")
-        self.codeFile.write("\n\npart1()")
-        self.codeFile.write("\npart2()")
+        self.codeFile.write("\n\ndef part2():\n\tpass")
+        self.codeFile.write("\n\nprint('Part 1')\npart1()")
+        self.codeFile.write("\nprint('Part 2')\npart2()")
 
 
 if (len(sys.argv) == 3):
     getData(sys.argv[1],sys.argv[2])
-else:
+elif (len(sys.argv) == 2):
     getData(sys.argv[1])
+else:
+    d = datetime.datetime.now()
+    getData(d.strftime("%d"))
