@@ -25,11 +25,6 @@ def part2():
 
 time = 0
 
-p1 = part1()
-print("Your answer to Part 1 is", p1)
-p2 = part2()
-print("Your answer to Part 2 is", p2)
-
 if part == '1':
     p1 = part1()
     print("Your answer to Part 1 is", p1)

@@ -43,6 +43,10 @@ class getData():
                 self.submitFile.write(f"        self.file = open('./{self.year}/day{self.day}/codetracker.txt')\n")
             elif i == 26:
                 self.submitFile.write(f"            file2 = open('./{self.year}/day{self.day}/codetracker.txt')\n")
+            elif i == 53:
+                self.submitFile.write(f"            file2 = open('./{self.year}/day{self.day}/codetracker.txt', 'w')\n")
+            elif i == 67:
+                self.submitFile.write(f"                file2 = open('./{self.year}/day{self.day}/codetracker.txt', 'w')\n")
             else:
                 self.submitFile.write(self.template[i])
 

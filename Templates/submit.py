@@ -45,10 +45,16 @@ class Submit():
     def printOutput(self):
         self.currTime = datetime.datetime.now()
         self.date_format = "%m:%d:%Y:%H:%M:%S"
-        text = [i.strip() for i in self.soup.text.split("\n")]
-        response = max(text, key=len).lower()
+        response = self.soup.find("main").find("article").find("p").text.lower()
+        print(response)
         if "You gave an answer" in response:
             print(colored(response.split("[")[0],"white","on_green"))
+        elif "solving" in response:
+            print(colored(response.split(".")[0]+" Part has been updated please retry","white","on_yellow"))
+            file2 = open("./codetracker.txt", "w")
+            file2.write(f"2\n" if self.part == "1" else "1\n")
+            file2.write(f"{self.currTime.strftime(self.date_format)}")
+            file2.close()
         elif "not" in response:
             if "high" in response:
                 print(colored(f"That is not the right answer; your answer is to HIGH","white","on_red"))
@@ -56,10 +62,13 @@ class Submit():
                 print(colored(f"That is not the right answer; your answer is to LOW","white","on_red"))
             else:
                 print(colored(f"That is not the right answer","white","on_red"))
-        else:
+        elif "right" in response:
             print(colored(f"That is the right answer","white","on_green"))
             if self.part == '1':
                 file2 = open("./codetracker.txt", "w")
                 file2.write(f"2\n")
                 file2.write(f"{self.currTime.strftime(self.date_format)}")
                 file2.close()
+        else:
+            print(self.soup.text)
+            print(colored(f"Unexpected error","white","on_blue"))
