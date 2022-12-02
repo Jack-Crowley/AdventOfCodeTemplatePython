@@ -16,10 +16,9 @@ class getData():
         self.year = year
         self.files = File(day,year)
         self.loadInput()
-        self.createCodeFile()        
+        self.createCodeFile()   
 
     def loadInput(self):
-        print(f'https://adventofcode.com/{self.year}/day/{self.day}/input')
         self.r = requests.post(f'https://adventofcode.com/{self.year}/day/{self.day}/input', cookies=self.cookies)
         self.soup = BeautifulSoup(self.r.text, 'html.parser')
         self.inputPath = self.files.path+"input.txt"
