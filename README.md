@@ -2,7 +2,7 @@
 A template and solutions for completing Advent Of Code in a quick and neatly fashion.
 
 # Blank Template
-If you wish to use the repository on your own, donwload the template from [Here](https://github.com/Jack-Crowley/AdventOfCode2022/releases/tag/Template "Here")
+If you wish to use the repository on your own, donwload the template from [Here](https://github.com/Jack-Crowley/AdventOfCode2022/releases/tag/BlankTemplate "Here")
 
 # Setup
 1. After installing the repository, create a file called ".env" in the main folder
