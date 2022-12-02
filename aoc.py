@@ -16,7 +16,7 @@ class getData():
         self.year = year
         self.files = File(day,year)
         self.loadInput()
-        # self.createSubmitFile()  
+        self.createSubmitFile()  
         self.createCodeFile() 
              
 

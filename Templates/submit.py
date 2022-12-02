@@ -43,6 +43,8 @@ class Submit():
         self.printOutput()
 
     def printOutput(self):
+        self.currTime = datetime.datetime.now()
+        self.date_format = "%m:%d:%Y:%H:%M:%S"
         text = [i.strip() for i in self.soup.text.split("\n")]
         response = max(text, key=len).lower()
         if "You gave an answer" in response:
