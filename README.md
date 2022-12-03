@@ -1,12 +1,8 @@
 ### AdventOfCode2022
 A template and solutions for completing Advent Of Code in a quick and neatly fashion.
 
-# Blank Template
-If you wish to use the repository on your own, donwload the template from [Here](https://github.com/Jack-Crowley/AdventOfCode2022/releases/tag/BlankTemplate "Here")
-
 # Setup
-1. After installing the repository, create a file called ".env" in the main folder
-2. Follow the template of the of ".sample.env" and copy your session ID from the Advent oOf Code website
+To start, please run setup.py which will go through the installation process.
 
 # Usage
 ### For current day problem
@@ -36,11 +32,3 @@ Example `$ python loadInput.py 5`
 `$ python loadInput.py {day} {year}`
 
 Example `$ python loadInput.py 5 2015`
-
-# Dependencies
-`$ pip install bs4`
-
-`$ pip install requests`
-
-`$ pip install python-dotenv`
-
