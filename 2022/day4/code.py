@@ -35,10 +35,7 @@ def part2():
         one,two = i.split(",")
         o1,o2 = one.split("-")
         t1,t2=two.split('-')
-        o1=int(o1)
-        o2=int(o2)
-        t1=int(t1)
-        t2=int(t2)
+        o1,o2,t1,t2 = [int(i) for i in [o1,o2,t1,t2]]
         if (o1 >= t1 and t2 >= o1):
             counter+=1
         elif (t1 >= o1 and o2 >= t1):
@@ -46,8 +43,6 @@ def part2():
     return counter
 
 time = 0
-p2 = part2()
-print("Your answer to Part 2 is", p2)
 
 if part == '1':
     p1 = part1()
