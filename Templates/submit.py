@@ -10,7 +10,6 @@ class Submit():
     def __init__(self, year, day):
         self.file = open("./codetracker.txt")
         self.part = self.file.readline().strip()
-        print(self.part)
         self.year = year
         self.day = day
         
