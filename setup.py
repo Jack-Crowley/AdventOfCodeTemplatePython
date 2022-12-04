@@ -23,19 +23,19 @@ path = os.path.dirname(os.path.abspath(__file__))
 backslash = "\\"
 currBarLength=0
 
-archivePath="Archived/archive-1"
-
-if not os.path.exists(os.path.join(path, "Archived")):
-    os.makedirs(os.path.join(path, "Archived"))
-
-while (os.path.exists(os.path.join(path,archivePath))):
-    a,b = archivePath.split('-')
-    b=int(b)+1
-    archivePath=a+"-"+str(b)
-
-archivedDir = os.path.join(path,archivePath)
-os.mkdir(archivedDir)
 if reset.lower()=="y":
+    archivePath="Archived/archive-1"
+
+    if not os.path.exists(os.path.join(path, "Archived")):
+        os.makedirs(os.path.join(path, "Archived"))
+
+    while (os.path.exists(os.path.join(path,archivePath))):
+        a,b = archivePath.split('-')
+        b=int(b)+1
+        archivePath=a+"-"+str(b)
+
+    archivedDir = os.path.join(path,archivePath)
+    os.mkdir(archivedDir)
     try:
         for i in range(2015, 2023):
             orgPath = os.path.dirname(__file__)+"\\"+str(i)
