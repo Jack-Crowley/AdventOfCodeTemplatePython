@@ -1,4 +1,4 @@
-### AdventOfCode2022
+### AdventOfCodeTemplatePython
 A template and solutions for completing Advent Of Code in a quick and neatly fashion.
 
 # Setup

@@ -23,8 +23,6 @@ def part2(data=data):
     
     return counter
 
-time = 0
-
 SampleInput = """"""
 SampleInput = [i.strip() for i in SampleInput.split("\n")]
 
